@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import GlassSurface from './GlassSurface'; // Assuming the component is saved here.
+import GlassSurface from './GlassSurface.jsx';
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState('About'); // Default to 'About'

@@ -1,5 +1,5 @@
 // src/components/ui/MagneticButton.tsx
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
 interface MagneticButtonProps {
@@ -10,7 +10,6 @@ interface MagneticButtonProps {
 
 const MagneticButton = ({ children, className, href }: MagneticButtonProps) => {
   const ref = useRef<HTMLAnchorElement>(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const springConfig = { stiffness: 150, damping: 15, mass: 0.1 };
   const dx = useSpring(0, springConfig);
@@ -23,7 +22,7 @@ const MagneticButton = ({ children, className, href }: MagneticButtonProps) => {
     const rect = ref.current.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    
+
     dx.set(x * 0.1);
     dy.set(y * 0.1);
     rotateX.set(-y * 0.1);
