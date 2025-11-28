@@ -1,5 +1,3 @@
-// src/components/Projects.tsx
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Github } from 'lucide-react';
 

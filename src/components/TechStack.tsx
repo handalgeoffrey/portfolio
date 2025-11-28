@@ -1,5 +1,3 @@
-// src/components/TechStack.tsx
-import React from 'react';
 import { motion } from 'framer-motion';
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },

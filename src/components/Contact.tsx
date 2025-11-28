@@ -1,5 +1,4 @@
 // src/components/Contact.tsx
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Github, Instagram } from 'lucide-react';
 

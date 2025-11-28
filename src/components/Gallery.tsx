@@ -1,5 +1,4 @@
 // src/components/Gallery.tsx
-import React from 'react';
 import DomeGallery from "@/components/DomeGallery.jsx";
 
 const Gallery = () => {
