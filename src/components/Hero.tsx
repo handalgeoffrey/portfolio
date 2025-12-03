@@ -35,7 +35,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center text-center bg-background overflow-x-hidden py-20">
       <div className="absolute inset-0 z-0 opacity-50 pointer-events-none">
         <Ballpit
           count={60}
@@ -102,15 +102,6 @@ const Hero = () => {
           >
             Photography <ArrowRight size={20} />
           </MagneticButton>
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce pointer-events-none"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-        >
-          <ArrowRight className="rotate-90 text-muted-foreground" size={32} />
         </motion.div>
       </div>
     </section>

@@ -37,9 +37,9 @@ class x {
   #t;
   size = { width: 0, height: 0, wWidth: 0, wHeight: 0, ratio: 0, pixelRatio: 0 };
   render = this.#i;
-  onBeforeRender = () => {};
-  onAfterRender = () => {};
-  onAfterResize = () => {};
+  onBeforeRender = () => { };
+  onAfterRender = () => { };
+  onAfterResize = () => { };
   #s = false;
   #n = false;
   isDisposed = false;
@@ -240,10 +240,10 @@ function S(e) {
     nPosition: new r(),
     hover: false,
     touching: false,
-    onEnter() {},
-    onMove() {},
-    onClick() {},
-    onLeave() {},
+    onEnter() { },
+    onMove() { },
+    onClick() { },
+    onLeave() { },
     ...e
   };
   (function (e, t) {
@@ -326,7 +326,7 @@ function L() {
 
 function TouchStart(e) {
   if (e.touches.length > 0) {
-    e.preventDefault();
+    // e.preventDefault(); // Removed to allow scrolling
     A.x = e.touches[0].clientX;
     A.y = e.touches[0].clientY;
 
@@ -347,7 +347,7 @@ function TouchStart(e) {
 
 function TouchMove(e) {
   if (e.touches.length > 0) {
-    e.preventDefault();
+    // e.preventDefault(); // Removed to allow scrolling
     A.x = e.touches[0].clientX;
     A.y = e.touches[0].clientY;
 
@@ -468,7 +468,7 @@ class W {
         const sumRadius = radius + otherRadius;
         if (dist < sumRadius) {
           const overlap = sumRadius - dist;
-          j.copy(_) 
+          j.copy(_)
             .normalize()
             .multiplyScalar(0.5 * overlap);
           H.copy(j).multiplyScalar(Math.max(B.length(), 1));
@@ -669,7 +669,7 @@ function createBallpit(e, t = {}) {
   const r = new a();
   let c = false;
 
-  e.style.touchAction = 'none';
+  // e.style.touchAction = 'none';
   e.style.userSelect = 'none';
   e.style.webkitUserSelect = 'none';
 

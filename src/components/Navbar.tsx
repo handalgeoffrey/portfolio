@@ -40,7 +40,7 @@ const Navbar = () => {
     <nav className="fixed top-0 inset-x-0 z-50 flex justify-center p-4">
       <div className="relative bg-white/5 backdrop-blur-xl border border-white/20 rounded-full px-2 py-2 flex space-x-1 md:space-x-2 shadow-2xl overflow-hidden max-w-[95vw] md:max-w-full overflow-x-auto md:overflow-visible">
         <GlassSurface
-          className="absolute transition-all duration-300 ease-out z-0"
+          className="absolute transition-all duration-300 ease-out z-0 pointer-events-none"
           width={activeLinkBounds.width}
           height={activeLinkBounds.height}
           borderRadius={50}
