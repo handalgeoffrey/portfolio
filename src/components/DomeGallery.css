@@ -13,8 +13,8 @@
 
 @media (max-width: 768px) {
   .sphere-root {
-    --radius: 200px;
-    --viewer-pad: 20px;
+    --radius: 160px;
+    --viewer-pad: 10px;
   }
 }
 

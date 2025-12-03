@@ -48,7 +48,7 @@ const Hero = () => {
       </div>
       <div className="relative z-10 max-w-5xl mx-auto px-4">
         <motion.h1
-          className="text-7xl md:text-9xl font-bold font-heading text-foreground mb-6 flex justify-center flex-wrap gap-x-4 md:gap-x-6 tracking-tight"
+          className="text-5xl md:text-9xl font-bold font-heading text-foreground mb-6 flex justify-center flex-wrap gap-x-2 md:gap-x-6 tracking-tight"
           variants={container}
           initial="hidden"
           animate="visible"
@@ -69,7 +69,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-3xl font-medium text-muted-foreground mb-10 font-sans tracking-wide"
+          className="text-lg md:text-3xl font-medium text-muted-foreground mb-8 md:mb-10 font-sans tracking-wide px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{
             opacity: 1,
@@ -85,20 +85,20 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="flex justify-center space-x-6 pointer-events-auto"
+          className="flex flex-col md:flex-row justify-center items-center gap-4 md:space-x-6 pointer-events-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           <MagneticButton
             href="#projects"
-            className="bg-primary text-primary-foreground font-bold py-4 px-8 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] flex items-center gap-2"
+            className="w-full md:w-auto bg-primary text-primary-foreground font-bold py-3 md:py-4 px-8 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] flex items-center justify-center gap-2"
           >
             View Work <ArrowRight size={20} />
           </MagneticButton>
           <MagneticButton
             href="#gallery"
-            className="border-2 border-primary/20 text-foreground font-bold py-4 px-8 rounded-full hover:bg-primary/10 hover:border-primary transition-all flex items-center gap-2 backdrop-blur-sm"
+            className="w-full md:w-auto border-2 border-primary/20 text-foreground font-bold py-3 md:py-4 px-8 rounded-full hover:bg-primary/10 hover:border-primary transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
           >
             Photography <ArrowRight size={20} />
           </MagneticButton>
