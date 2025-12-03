@@ -36,7 +36,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center text-center bg-background overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-50">
+      <div className="absolute inset-0 z-0 opacity-50 pointer-events-none">
         <Ballpit
           count={60}
           gravity={0.5}
@@ -85,7 +85,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="flex justify-center space-x-6"
+          className="flex justify-center space-x-6 pointer-events-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
@@ -102,6 +102,15 @@ const Hero = () => {
           >
             Photography <ArrowRight size={20} />
           </MagneticButton>
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce pointer-events-none"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}
+        >
+          <ArrowRight className="rotate-90 text-muted-foreground" size={32} />
         </motion.div>
       </div>
     </section>
