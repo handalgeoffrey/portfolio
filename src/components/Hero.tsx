@@ -34,6 +34,14 @@ const Hero = () => {
     },
   };
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center text-center bg-background overflow-x-hidden py-20">
       <div className="absolute inset-0 z-0 opacity-50 pointer-events-none">
@@ -92,12 +100,14 @@ const Hero = () => {
         >
           <MagneticButton
             href="#projects"
+            onClick={(e) => handleScroll(e, '#projects')}
             className="w-full md:w-auto bg-primary text-primary-foreground font-bold py-3 md:py-4 px-8 rounded-full transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] flex items-center justify-center gap-2"
           >
             View Work <ArrowRight size={20} />
           </MagneticButton>
           <MagneticButton
             href="#gallery"
+            onClick={(e) => handleScroll(e, '#gallery')}
             className="w-full md:w-auto border-2 border-primary/20 text-foreground font-bold py-3 md:py-4 px-8 rounded-full hover:bg-primary/10 hover:border-primary transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
           >
             Photography <ArrowRight size={20} />

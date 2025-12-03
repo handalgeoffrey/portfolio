@@ -6,9 +6,10 @@ interface MagneticButtonProps {
   children: React.ReactNode;
   className?: string;
   href: string;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const MagneticButton = ({ children, className, href }: MagneticButtonProps) => {
+const MagneticButton = ({ children, className, href, onClick }: MagneticButtonProps) => {
   const ref = useRef<HTMLAnchorElement>(null);
 
   const springConfig = { stiffness: 150, damping: 15, mass: 0.1 };
@@ -41,6 +42,7 @@ const MagneticButton = ({ children, className, href }: MagneticButtonProps) => {
       ref={ref}
       href={href}
       className={className}
+      onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
